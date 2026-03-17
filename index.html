@@ -1,20 +1,66 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Layar Antrean Konsultasi</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 style=" text-align: center; background-color: #ff00f2; padding: 20px; border-radius: 20px; color: #ff0000;">Hello World</h1>
     <div class="container">
-        <p>This is a paragraph.</p>
+        <header>
+            <div class="logo-title">
+                <h1>Pusat Layanan Konsultasi</h1>
+                <p>Melayani dengan Sepenuh Hati</p>
+            </div>
+            <div class="datetime">
+                <div id="date">Selasa, 17 Maret 2026</div>
+                <div id="clock">14:00:00</div>
+            </div>
+        </header>
+
+        <main>
+            <section class="active-call">
+                <h2>NOMOR ANTREAN</h2>
+                <div class="queue-number">A-024</div>
+                <div class="counter-name">Silakan Menuju Loket 1 (Konsultasi Umum)</div>
+            </section>
+
+            <aside class="other-counters">
+                <h3>Antrean Loket Lainnya</h3>
+                
+                <div class="card">
+                    <div class="card-counter">Loket 2 (Konsultasi Khusus)</div>
+                    <div class="card-number">B-015</div>
+                </div>
+
+                <div class="card">
+                    <div class="card-counter">Loket 3 (Layanan Informasi)</div>
+                    <div class="card-number">C-008</div>
+                </div>
+
+                <div class="card">
+                    <div class="card-counter">Loket 4 (Pengaduan)</div>
+                    <div class="card-number">D-002</div>
+                </div>
+            </aside>
+        </main>
+
+        <footer>
+            <marquee behavior="scroll" direction="left" scrollamount="6">
+                Selamat datang di Pusat Layanan Konsultasi. Harap persiapkan dokumen persyaratan Anda sebelum menuju loket. Mohon mengantre dengan tertib.
+            </marquee>
+        </footer>
     </div>
 
-    <div class="container-body">
-        <p>This is another paragraph.</p>
-
-    </div>
-    
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('id-ID', { hour12: false });
+            document.getElementById('clock').textContent = timeString;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
 </body>
 </html>
