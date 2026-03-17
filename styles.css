@@ -1,0 +1,16 @@
+h1 {
+    color: blue;
+    text-align: center;
+}
+
+.container {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.container-body {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+}
